@@ -1,0 +1,6 @@
+filename = input("Enter file to be processed: ")
+print(filename)
+f = open(filename, "r")
+file_contents = f.read()
+print (file_contents)
+f.close()
