@@ -4,11 +4,12 @@ def main():
     filename = input("Enter file to be processed: ")
     file = read_file(filename)    
 
-    print(file)
+    print(file['Fuzzy_Sets'])
     
 def read_file(filename):
     info = {}
     real_values = []
+    fuzzy = {}
     f = open(filename, "r")
     file_contents = (re.split(r'\n\n',f.read()))#split text file by using every double whitespace
 
@@ -24,13 +25,20 @@ def read_file(filename):
             real_values.append(dict({"name":measurements[i][0], "value":measurements[i][1]}))
             
     for i in range(2,len(file_contents)-1,2): #Locate and group fuzzy set values
-        fuzzy_sets.append(file_contents[i+1].split("\n"))
+        temp_fuzzy = []
+        fuzzy_sets = (file_contents[i+1].split("\n"))
+        for x in range (0, len(fuzzy_sets)):
+            y = fuzzy_sets[x].split(" ")
+            #print (y)
+            temp_fuzzy.append(y)
+
+        fuzzy[file_contents[i].strip()] = temp_fuzzy
 
     f.close()
 
     info['Rule_Base'] = rule_base
     info['Rules'] = rules.split("\n")
-    info['Fuzzy_Sets'] = fuzzy_sets
+    info['Fuzzy_Sets'] = fuzzy
     info['Real_Values'] = real_values
 
     return info

@@ -7,7 +7,7 @@ Rule 4 If the driving is bad and the journey_time is long then the tip will be s
 
 driving 
 
-bad 0 30 0 20 
+bad 0 30 0 20
 average 50 50 20 20
 good 80 100 20 0
 
