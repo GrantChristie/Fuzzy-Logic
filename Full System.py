@@ -3,8 +3,7 @@ import re
 def main():
     filename = input("Enter file to be processed: ")
     file = read_file(filename)
-    process(file['Rules'])
-
+    
     group = {}
     groups = {}
     for i in range(0,len(file['Real_Values'])):
@@ -21,7 +20,9 @@ def main():
                     group[x[0]] = membership(x[1], x[2], x[3], x[4], real_value)
         groups[name] = group
 
-    print (groups)
+    #print (groups)
+    #print (file['Fuzzy_Sets'])
+    process(file['Rules'], groups, file['Fuzzy_Sets'])
     
 def read_file(filename):
     info = {}
@@ -93,15 +94,28 @@ def read_rule(rule):
         new_rules = {"ID": ID, "Variables":variables, "Values":values, "Operator":operator, "Output":{output, value}}
         return new_rules
     
-def process(rules):
+def process(rules,memberships, fuzzy_sets ):
+    
     conditions = {}
     for i in range(0, len(rules)):
+        condition_ints = []
         rule = read_rule(rules[i])
         for x in range(0,2):
             conditions.update({rule["Variables"][x] : rule["Values"][x]})
-        #print(conditions)
 
-        #for key, value in conditions.items():
+        for key, value in conditions.items():
+            condition_ints.append(memberships[key][value])
+
+        #print(conditions)
+        #print(condition_ints)
+
+        #SEE SLIDE 28
+        print(rule['Operator'])
+        if rule['Operator'] == "and":
+            operator_value = min(condition_ints)
+        else:
+            operator_value = max(condition_ints)
+        #print (operator_value)
             
 if __name__ == '__main__':
     main()
