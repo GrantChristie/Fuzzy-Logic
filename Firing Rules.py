@@ -22,7 +22,7 @@ def main():
 
     #print (groups)
     #print (file['Fuzzy_Sets'])
-    process(file['Rules'], groups, file['Fuzzy_Sets'])
+    process(file['Rules'], groups)
     
 def read_file(filename):
     info = {}
@@ -94,7 +94,7 @@ def read_rule(rule):
         new_rules = {"ID": ID, "Variables":variables, "Values":values, "Operator":operator, "Output":{output: value}}
         return new_rules
     
-def process(rules,memberships, fuzzy_sets ):
+def process(rules,memberships):
     fired_values = {}
     conditions = {}
     for i in range(0, len(rules)):
