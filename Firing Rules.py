@@ -22,7 +22,7 @@ def main():
 
     #print (groups)
     #print (file['Fuzzy_Sets'])
-    process(file['Rules'], groups)
+    print(process(file['Rules'], groups))
     
 def read_file(filename):
     info = {}
@@ -118,13 +118,21 @@ def process(rules,memberships):
 
         #print(list(rule["Output"].values())[0])
         output_value = list(rule["Output"].values())[0]
-        print (output_value)
+        #print (output_value)
 
         if output_value in fired_values:
            fired_values[output_value].append(operator_value)
         else:
            fired_values[output_value] = [operator_value]
-    print(fired_values)
+           
+    sorted_fired_values = {} #required to avoid runtime error when removing 0 values
+    for key, value in fired_values.items():
+        max_value = max(value)
+        #print(max_value)
+        if max_value !=0:
+            sorted_fired_values[key] = max_value
+
+    return sorted_fired_values
             
 if __name__ == '__main__':
     main()

@@ -22,7 +22,10 @@ def main():
 
     #print (groups)
     #print (file['Fuzzy_Sets'])
-    process(file['Rules'], groups, file['Fuzzy_Sets'])
+    fired_values = process(file['Rules'], groups)
+    #print (fired_values)
+
+    defuzzification(fired_values, file['Fuzzy_Sets'])
     
 def read_file(filename):
     info = {}
@@ -94,7 +97,7 @@ def read_rule(rule):
         new_rules = {"ID": ID, "Variables":variables, "Values":values, "Operator":operator, "Output":{output: value}}
         return new_rules
     
-def process(rules,memberships, fuzzy_sets ):
+def process(rules,memberships):
     fired_values = {}
     conditions = {}
     for i in range(0, len(rules)):
@@ -118,13 +121,26 @@ def process(rules,memberships, fuzzy_sets ):
 
         #print(list(rule["Output"].values())[0])
         output_value = list(rule["Output"].values())[0]
-        print (output_value)
+        #print (output_value)
 
         if output_value in fired_values:
            fired_values[output_value].append(operator_value)
         else:
            fired_values[output_value] = [operator_value]
-    print(fired_values)
-            
+           
+    sorted_fired_values = {} #required to avoid runtime error when removing 0 values
+    for key, value in fired_values.items():
+        max_value = max(value)
+        #print(max_value)
+        if max_value !=0:
+            sorted_fired_values[key] = max_value
+
+    return sorted_fired_values
+
+def defuzzification(fired_values, fuzzy_sets):
+    print(fired_values)            
+    for i in range(0, len(fuzzy_sets)):
+        print("test")
+        
 if __name__ == '__main__':
     main()
