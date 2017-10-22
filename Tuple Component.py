@@ -9,19 +9,24 @@ def main():
     beta = int(input("Enter beta value: "))
 
     x = int(input("Enter test value: "))
-    membership(a,b,alpha,beta,x)
+    print(membership(a,b,alpha,beta,x))
     
 def membership(a,b,alpha,beta,x):
+    a = int(a)
+    b = int(b)
+    alpha = int(alpha)
+    beta = int(beta)
+    x = int(x)
     if x < a - alpha:
-        print(0)
+        return 0
     elif x in range(a - alpha, a):
-            print((x - a + alpha )/alpha)
+            return (x - a + alpha )/alpha
     elif x in range(a, b):
-        print(1)
+        return 1
     elif x in range(b, b + beta):
-        print((b + beta - x)/beta)
+        return(b + beta - x)/beta
     elif x > b + beta:
-        print(0)
+        return 0
 
 if __name__ == '__main__':
     main()
