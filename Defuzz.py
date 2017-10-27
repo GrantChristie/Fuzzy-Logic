@@ -124,6 +124,7 @@ def process(rules,memberships):
     return sorted_fired_values, output_key
 
 def defuzzification(fired_values, fuzzy_sets, output_key):
+    print(fuzzy_sets)
     numerator_values = []
     denominator_values = []
     for i in range(0, len(fuzzy_sets)):

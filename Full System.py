@@ -3,7 +3,7 @@ import re
 def main():
     filename = input("Enter file to be processed: ")
     file = read_file(filename)
-    
+    print(file)
     group = {}
     groups = {}
     for i in range(0,len(file['Real_Values'])):
@@ -12,7 +12,7 @@ def main():
         #print (name)
         #print (value)
 
-        for key, value in file['Fuzzy_Sets'].items():
+        for key, value in file['Sets'].items():
             if key == name:
                 for x in value:
                     #print(x[0])          
@@ -25,12 +25,12 @@ def main():
     fired_values = process(file['Rules'], groups)[0]
     output_key = process(file['Rules'], groups)[1]#revise this if time permits
     #print (output_key)
-    print(defuzzification(fired_values, file['Fuzzy_Sets'], output_key))
+    print(defuzzification(fired_values, file['Sets'], output_key))
     
 def read_file(filename):
     info = {}
     real_values = []
-    fuzzy = {}
+    sets = {}
     f = open(filename, "r")
     file_contents = (re.split(r'\n\n',f.read()))#split text file by using every double whitespace
 
@@ -53,13 +53,13 @@ def read_file(filename):
             #print (y)
             temp_fuzzy.append(y)
 
-        fuzzy[file_contents[i].strip()] = temp_fuzzy
+        sets[file_contents[i].strip()] = temp_fuzzy
 
     f.close()
 
     info['Rule_Base'] = rule_base
     info['Rules'] = rules.split("\n")
-    info['Fuzzy_Sets'] = fuzzy
+    info['Sets'] = sets
     info['Real_Values'] = real_values
 
     return info
@@ -147,6 +147,14 @@ def defuzzification(fired_values, fuzzy_sets, output_key):
     #for i in fired_values:
      #   defuzz_fired_values.append(fired_values.key())
     #print(fuzzy_sets[output_key])
+    offset = 0 
+    for i in range(0, len(fuzzy_sets)):
+        x = fuzzy_sets[output_key][i]
+        temp_offset = (float(fuzzy_sets[output_key][i][1]) - float(fuzzy_sets[output_key][i][3]))
+        if (temp_offset < offset):
+            offset = temp_offset
+    print("offset: ", offset)
+
     for i in range(0, len(fuzzy_sets)):
         #print(fuzzy_sets[output_key][i])
         if fuzzy_sets[output_key][i][0] in fired_values:
@@ -154,15 +162,20 @@ def defuzzification(fired_values, fuzzy_sets, output_key):
             b = float(fuzzy_sets[output_key][i][2])
             alpha = float(fuzzy_sets[output_key][i][3])
             beta = float(fuzzy_sets[output_key][i][4])
+
             #print(a,b,alpha,beta)
             #calculate base of fuzzy sets (found with sketches in tutorial)
+            print (b," + ",beta," - ",a," - ",alpha)
             base = abs((b + beta) - (a - alpha))
             print("Base: ",base)
             print("Value: ",fired_values[fuzzy_sets[output_key][i][0]])
             #area = 0.5 * value of results from rule firing * base
             area = (0.5 * fired_values[fuzzy_sets[output_key][i][0]] * base)
             print ("Area: ", area)
-            center = (a - alpha) + base/2
+            if (a-alpha) == offset:
+                center = abs(((a - alpha) + base/2)) #+ offset
+            else:
+                center = abs(((a - alpha) + base/2) + offset)
             print ("Center: ", center)
             numerator_values.append(area * center)
             denominator_values.append(area)

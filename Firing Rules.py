@@ -12,7 +12,7 @@ def main():
         #print (name)
         #print (value)
 
-        for key, value in file['Fuzzy_Sets'].items():
+        for key, value in file['Sets'].items():
             if key == name:
                 for x in value:
                     #print(x[0])          
@@ -27,7 +27,7 @@ def main():
 def read_file(filename):
     info = {}
     real_values = []
-    fuzzy = {}
+    sets = {}
     f = open(filename, "r")
     file_contents = (re.split(r'\n\n',f.read()))#split text file by using every double whitespace
 
@@ -50,13 +50,13 @@ def read_file(filename):
             #print (y)
             temp_fuzzy.append(y)
 
-        fuzzy[file_contents[i].strip()] = temp_fuzzy
+        sets[file_contents[i].strip()] = temp_fuzzy
 
     f.close()
 
     info['Rule_Base'] = rule_base
     info['Rules'] = rules.split("\n")
-    info['Fuzzy_Sets'] = fuzzy
+    info['Sets'] = sets
     info['Real_Values'] = real_values
 
     return info

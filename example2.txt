@@ -1,0 +1,27 @@
+currentRulebase
+
+Rule 1 If the temperature is high or the current is high then the result will be reduceCurrent
+Rule 2 If the temperature is medium and the temperature is medium then the result will be noChange
+Rule 3 If the temperature is low and the current is high then the result will be noChange
+Rule 4 If the temperature is low and the current is low then the result will be increaseCurrent
+
+current 
+
+low 0 0 0 10 
+medium 10 10 10 10
+high 20 20 10 0
+
+temperature 
+
+low 0 100 0 100
+medium 200 200 150 150
+high 400 450 150 0
+
+result
+
+reduceCurrent -50 -50 50 50
+noChange 0 0 50 50
+increaseCurrent 50 50 50 50
+
+temperature = 300
+current = 17
