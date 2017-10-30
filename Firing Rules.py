@@ -22,7 +22,7 @@ def main():
 
     #print (groups)
     #print (file['Fuzzy_Sets'])
-    print(process(file['Rules'], groups))
+    print(process(file['Rules'], groups)[0])
     
 def read_file(filename):
     info = {}
@@ -67,7 +67,7 @@ def membership(a,b,alpha,beta,x):
     alpha = int(alpha)
     beta = int(beta)
     x = int(x)
-    if x < a - alpha:
+    if x < (a - alpha):
         return 0
     elif x in range(a - alpha, a):
             return (x - a + alpha )/alpha
@@ -75,8 +75,9 @@ def membership(a,b,alpha,beta,x):
         return 1
     elif x in range(b, b + beta):
         return(b + beta - x)/beta
-    elif x > b + beta:
+    elif x > ( b + beta):
         return 0
+    return
 
 def read_rule(rule):
     new_rules = {}
@@ -106,9 +107,12 @@ def process(rules,memberships):
         for key, value in conditions.items():
             condition_ints.append(memberships[key][value])
 
-        #print(conditions)
-        #print(condition_ints)
-
+        print(conditions)
+        print(condition_ints)
+        for x in condition_ints:
+            if x == None:
+                condition_ints.remove(x)
+                
         #SEE SLIDE 28
         if rule['Operator'] == "and":
             operator_value = min(condition_ints)
@@ -118,6 +122,7 @@ def process(rules,memberships):
 
         #print(list(rule["Output"].values())[0])
         output_value = list(rule["Output"].values())[0]
+        output_key = list(rule["Output"].keys())[0]#revise...
         #print (output_value)
 
         if output_value in fired_values:
@@ -132,7 +137,7 @@ def process(rules,memberships):
         if max_value !=0:
             sorted_fired_values[key] = max_value
 
-    return sorted_fired_values
+    return sorted_fired_values, output_key
             
 if __name__ == '__main__':
     main()

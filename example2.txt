@@ -1,4 +1,4 @@
-currentRulebase
+temperatureRulebase
 
 Rule 1 If the temperature is high or the current is high then the result will be reduceCurrent
 Rule 2 If the temperature is medium and the temperature is medium then the result will be noChange

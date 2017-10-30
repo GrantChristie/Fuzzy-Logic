@@ -3,28 +3,20 @@ import re
 def main():
     filename = input("Enter file to be processed: ")
     file = read_file(filename)
-    print(file)
     group = {}
     groups = {}
     for i in range(0,len(file['Real_Values'])):
         name = file['Real_Values'][i]['name']
         real_value = file['Real_Values'][i]['value']
-        #print (name)
-        #print (value)
 
         for key, value in file['Sets'].items():
             if key == name:
                 for x in value:
-                    #print(x[0])          
-                    #{x[0], membership(x[1], x[2], x[3], x[4], real_value)}
                     group[x[0]] = membership(x[1], x[2], x[3], x[4], real_value)
         groups[name] = group
 
-    #print (groups)
-    #print (file['Fuzzy_Sets'])
     fired_values = process(file['Rules'], groups)[0]
     output_key = process(file['Rules'], groups)[1]#revise this if time permits
-    #print (output_key)
     print(defuzzification(fired_values, file['Sets'], output_key))
     
 def read_file(filename):
@@ -65,7 +57,6 @@ def read_file(filename):
     return info
 
 def membership(a,b,alpha,beta,x):
-    #MAYBE THESE SHOULD BE CHANGED TO FLOATS TO SO MORE VALUES CAN BE ACCEPTED
     a = int(a)
     b = int(b)
     alpha = int(alpha)
@@ -112,7 +103,10 @@ def process(rules,memberships):
 
         #print(conditions)
         #print(condition_ints)
-
+        for x in condition_ints:
+            if x == None:
+                condition_ints.remove(x)
+                
         #SEE SLIDE 28
         if rule['Operator'] == "and":
             operator_value = min(condition_ints)
@@ -165,18 +159,18 @@ def defuzzification(fired_values, fuzzy_sets, output_key):
 
             #print(a,b,alpha,beta)
             #calculate base of fuzzy sets (found with sketches in tutorial)
-            print (b," + ",beta," - ",a," - ",alpha)
+            #print (b," + ",beta," - ",a," - ",alpha)
             base = abs((b + beta) - (a - alpha))
-            print("Base: ",base)
-            print("Value: ",fired_values[fuzzy_sets[output_key][i][0]])
+            #print("Base: ",base)
+            #print("Value: ",fired_values[fuzzy_sets[output_key][i][0]])
             #area = 0.5 * value of results from rule firing * base
             area = (0.5 * fired_values[fuzzy_sets[output_key][i][0]] * base)
-            print ("Area: ", area)
+            #print ("Area: ", area)
             if (a-alpha) == offset:
                 center = abs(((a - alpha) + base/2)) #+ offset
             else:
                 center = abs(((a - alpha) + base/2) + offset)
-            print ("Center: ", center)
+            #print ("Center: ", center)
             numerator_values.append(area * center)
             denominator_values.append(area)
 

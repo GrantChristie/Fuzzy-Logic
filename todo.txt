@@ -1,1 +1,0 @@
-ensure full system matches seperate component files

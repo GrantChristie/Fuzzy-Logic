@@ -1,9 +1,0 @@
-Fuzzy Logic Overview
-
-Design Document
-
-Implementation of Components
-
-Testing
-
-Evalulation
