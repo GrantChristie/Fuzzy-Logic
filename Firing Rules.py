@@ -2,52 +2,41 @@ import re
 
 def main():
     filename = input("Enter file to be processed: ")
-    file = read_file(filename)
-    
+    file = read_file(filename)  
     group = {}
     groups = {}
     for i in range(0,len(file['Real_Values'])):
         name = file['Real_Values'][i]['name']
         real_value = file['Real_Values'][i]['value']
-        #print (name)
-        #print (value)
-
         for key, value in file['Sets'].items():
             if key == name:
                 for x in value:
-                    #print(x[0])          
-                    #{x[0], membership(x[1], x[2], x[3], x[4], real_value)}
                     group[x[0]] = membership(x[1], x[2], x[3], x[4], real_value)
         groups[name] = group
-
-    #print (groups)
-    #print (file['Fuzzy_Sets'])
-    print(process(file['Rules'], groups)[0])
+    print(fire(file['Rules'], groups)[0])
     
 def read_file(filename):
     info = {}
     real_values = []
     sets = {}
     f = open(filename, "r")
-    file_contents = (re.split(r'\n\n',f.read()))#split text file by using every double whitespace
+    file_contents = (re.split(r'\n\n',f.read()))
 
     rule_base =  file_contents[0]
     rules = file_contents[1]
     fuzzy_sets = []
-    measurements = file_contents[len(file_contents)-1].split("\n") #last 'paragraph' will be the measurements
+    measurements = file_contents[len(file_contents)-1].split("\n")
 
-    #store real values 
     for i in range(0, len(measurements)):
         measurements[i] = measurements[i].split(" = ")
         if measurements[i] is not None:
             real_values.append(dict({"name":measurements[i][0], "value":measurements[i][1]}))
             
-    for i in range(2,len(file_contents)-1,2): #Locate and group fuzzy set values
+    for i in range(2,len(file_contents)-1,2):
         temp_fuzzy = []
         fuzzy_sets = (file_contents[i+1].split("\n"))
         for x in range (0, len(fuzzy_sets)):
             y = fuzzy_sets[x].split(" ")
-            #print (y)
             temp_fuzzy.append(y)
 
         sets[file_contents[i].strip()] = temp_fuzzy
@@ -95,7 +84,7 @@ def read_rule(rule):
         new_rules = {"ID": ID, "Variables":variables, "Values":values, "Operator":operator, "Output":{output: value}}
         return new_rules
     
-def process(rules,memberships):
+def fire(rules,memberships):
     fired_values = {}
     conditions = {}
     for i in range(0, len(rules)):
@@ -107,33 +96,26 @@ def process(rules,memberships):
         for key, value in conditions.items():
             condition_ints.append(memberships[key][value])
 
-        print(conditions)
-        print(condition_ints)
         for x in condition_ints:
             if x == None:
                 condition_ints.remove(x)
-                
-        #SEE SLIDE 28
+
         if rule['Operator'] == "and":
             operator_value = min(condition_ints)
         else:
             operator_value = max(condition_ints)
-        #print (operator_value)
 
-        #print(list(rule["Output"].values())[0])
         output_value = list(rule["Output"].values())[0]
-        output_key = list(rule["Output"].keys())[0]#revise...
-        #print (output_value)
+        output_key = list(rule["Output"].keys())[0]
 
         if output_value in fired_values:
            fired_values[output_value].append(operator_value)
         else:
            fired_values[output_value] = [operator_value]
            
-    sorted_fired_values = {} #required to avoid runtime error when removing 0 values
+    sorted_fired_values = {} 
     for key, value in fired_values.items():
         max_value = max(value)
-        #print(max_value)
         if max_value !=0:
             sorted_fired_values[key] = max_value
 

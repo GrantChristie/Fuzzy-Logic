@@ -11,12 +11,12 @@ def read_file(filename):
     real_values = []
     sets = {}
     f = open(filename, "r")
-    file_contents = (re.split(r'\n\n',f.read()))#split text file by using every double whitespace
+    file_contents = (re.split(r'\n\n',f.read()))
 
     rule_base =  file_contents[0]
     rules = file_contents[1]
     fuzzy_sets = []
-    measurements = file_contents[len(file_contents)-1].split("\n") #last 'paragraph' will be the measurements
+    measurements = file_contents[len(file_contents)-1].split("\n") 
 
     #store real values 
     for i in range(0, len(measurements)):
@@ -24,12 +24,11 @@ def read_file(filename):
         if measurements[i] is not None:
             real_values.append(dict({"name":measurements[i][0], "value":measurements[i][1]}))
             
-    for i in range(2,len(file_contents)-1,2): #Locate and group fuzzy set values
+    for i in range(2,len(file_contents)-1,2): 
         temp_fuzzy = []
         fuzzy_sets = (file_contents[i+1].split("\n"))
         for x in range (0, len(fuzzy_sets)):
             y = fuzzy_sets[x].split(" ")
-            #print (y)
             temp_fuzzy.append(y)
 
         sets[file_contents[i].strip()] = temp_fuzzy

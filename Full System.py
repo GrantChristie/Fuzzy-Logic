@@ -15,8 +15,8 @@ def main():
                     group[x[0]] = membership(x[1], x[2], x[3], x[4], real_value)
         groups[name] = group
 
-    fired_values = process(file['Rules'], groups)[0]
-    output_key = process(file['Rules'], groups)[1]#revise this if time permits
+    fired_values = fire(file['Rules'], groups)[0]
+    output_key = fire(file['Rules'], groups)[1]#revise this if time permits
     print(defuzzification(fired_values, file['Sets'], output_key))
     
 def read_file(filename):
@@ -89,7 +89,7 @@ def read_rule(rule):
         new_rules = {"ID": ID, "Variables":variables, "Values":values, "Operator":operator, "Output":{output: value}}
         return new_rules
     
-def process(rules,memberships):
+def fire(rules,memberships):
     fired_values = {}
     conditions = {}
     for i in range(0, len(rules)):

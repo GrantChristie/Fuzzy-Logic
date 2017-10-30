@@ -1,13 +1,8 @@
-#4 tuple fuzzy representation - lecture slide 20
-
 def main():
-    
-
     a = int(input("Enter a value: "))
     b = int(input("Enter b value: "))
     alpha = int(input("Enter alpha value: "))
     beta = int(input("Enter beta value: "))
-
     x = int(input("Enter test value: "))
     print(membership(a,b,alpha,beta,x))
     
