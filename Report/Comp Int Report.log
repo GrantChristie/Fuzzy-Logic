@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.14)  30 OCT 2017 13:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.14)  30 OCT 2017 18:22
 entering extended mode
 **"./Comp Int Report.tex"
 ("Comp Int Report.tex"
@@ -251,12 +251,25 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
  [6]
+<images/example1.png, id=33, 1141.866pt x 72.87225pt>
+File: images/example1.png Graphic file (type png)
+
+<use images/example1.png>
+Package pdftex.def Info: images/example1.png used on input line 182.
+(pdftex.def)             Requested size: 341.43306pt x 21.78957pt.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ò in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
+
+<images/example2.png, id=35, 131.89275pt x 72.87225pt>
+File: images/example2.png Graphic file (type png)
+
+<use images/example2.png>
+Package pdftex.def Info: images/example2.png used on input line 191.
+(pdftex.def)             Requested size: 142.26378pt x 78.603pt.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ò in font cmr10!
@@ -264,42 +277,63 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 185.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 196.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
- [7]
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
+
+<images/example3.png, id=36, 766.66425pt x 25.2945pt>
+File: images/example3.png Graphic file (type png)
+
+<use images/example3.png>
+Package pdftex.def Info: images/example3.png used on input line 200.
+(pdftex.def)             Requested size: 341.43306pt x 11.26468pt.
+ [7 <./images/example1.png> <./images/example2.png>]
+<images/example4.png, id=43, 235.47975pt x 25.89674pt>
+File: images/example4.png Graphic file (type png)
+
+<use images/example4.png>
+Package pdftex.def Info: images/example4.png used on input line 209.
+(pdftex.def)             Requested size: 170.71652pt x 18.77524pt.
+
+<images/example5.png, id=44, 244.5135pt x 27.10126pt>
+File: images/example5.png Graphic file (type png)
+
+<use images/example5.png>
+Package pdftex.def Info: images/example5.png used on input line 218.
+(pdftex.def)             Requested size: 170.71652pt x 18.92276pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--229
 []\OT1/cmr/m/n/10 Dictionary 1 in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
+Underfull \hbox (badness 10000) in paragraph at lines 229--229
 \OT1/cmr/m/n/10 ex-pect-ed-file.txt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
 []\OT1/cmr/m/n/10 Output matches
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--203
+Underfull \hbox (badness 10000) in paragraph at lines 231--231
 []\OT1/cmr/m/n/10 Dictionary 2 in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--203
+Underfull \hbox (badness 10000) in paragraph at lines 231--231
 \OT1/cmr/m/n/10 ex-pect-ed-file.txt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
 []\OT1/cmr/m/n/10 Output matches
  []
 
 
-Underfull \hbox (badness 1701) in paragraph at lines 205--205
+Underfull \hbox (badness 1701) in paragraph at lines 233--233
 []\OT1/cmr/m/n/10 Script should ter-
  []
 
@@ -310,203 +344,172 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--207
+Underfull \hbox (badness 10000) in paragraph at lines 235--235
 \OT1/cmr/m/n/10 does not ex-ist,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--207
+Underfull \hbox (badness 10000) in paragraph at lines 235--235
 \OT1/cmr/m/n/10 empty.txt for
  []
 
 
-Underfull \hbox (badness 1701) in paragraph at lines 207--207
+Underfull \hbox (badness 1701) in paragraph at lines 235--235
 []\OT1/cmr/m/n/10 Script should ter-
  []
 
 
-Overfull \hbox (17.98029pt too wide) in paragraph at lines 197--210
+Overfull \hbox (15.98029pt too wide) in paragraph at lines 225--238
+ [] 
+ []
+
+[8 <./images/example3.png> <./images/example4.png> <./images/example5.png>]
+Overfull \hbox (15.98029pt too wide) in paragraph at lines 243--258
  [] 
  []
 
 
-Overfull \hbox (17.98029pt too wide) in paragraph at lines 215--230
- [] 
- []
-
-[8]
-Underfull \hbox (badness 4713) in paragraph at lines 238--238
+Underfull \hbox (badness 4713) in paragraph at lines 266--266
 \OT1/cmr/m/n/10 ing is good and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--238
+Underfull \hbox (badness 10000) in paragraph at lines 266--266
 []\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 'ID': '1', 'Vari-
  []
 
 
-Underfull \hbox (badness 4279) in paragraph at lines 238--238
+Underfull \hbox (badness 4279) in paragraph at lines 266--266
 \OT1/cmr/m/n/10 ables': ['driv-ing',
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--238
+Underfull \hbox (badness 10000) in paragraph at lines 266--266
 \OT1/cmr/m/n/10 'jour-ney[]time'],
  []
 
 
-Underfull \hbox (badness 4621) in paragraph at lines 238--238
+Underfull \hbox (badness 4621) in paragraph at lines 266--266
 \OT1/cmr/m/n/10 'Val-ues': ['good',
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--238
+Underfull \hbox (badness 10000) in paragraph at lines 266--266
 \OT1/cmr/m/n/10 'and', 'Out-put':
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
 []\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 'ID': '1', 'Vari-
  []
 
 
-Underfull \hbox (badness 4279) in paragraph at lines 238--239
+Underfull \hbox (badness 4279) in paragraph at lines 266--267
 \OT1/cmr/m/n/10 ables': ['driv-ing',
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
 \OT1/cmr/m/n/10 'jour-ney[]time'],
  []
 
 
-Underfull \hbox (badness 4621) in paragraph at lines 238--239
+Underfull \hbox (badness 4621) in paragraph at lines 266--267
 \OT1/cmr/m/n/10 'Val-ues': ['good',
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
 \OT1/cmr/m/n/10 'and', 'Out-put':
  []
 
 
-Underfull \hbox (badness 4713) in paragraph at lines 240--240
+Underfull \hbox (badness 4713) in paragraph at lines 268--268
 \OT1/cmr/m/n/10 ing is good and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
 []\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 'ID': '4', 'Vari-
  []
 
 
-Underfull \hbox (badness 7221) in paragraph at lines 244--244
+Underfull \hbox (badness 7221) in paragraph at lines 272--272
 \OT1/cmr/m/n/10 ables': ['tem-per-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
 \OT1/cmr/m/n/10 a-ture', 'cur-rent'],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
 \OT1/cmr/m/n/10 'Val-ues': ['low',
  []
 
 
-Underfull \hbox (badness 5817) in paragraph at lines 244--244
+Underfull \hbox (badness 5817) in paragraph at lines 272--272
 \OT1/cmr/m/n/10 'low'], 'Op-er-a-tor':
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
 \OT1/cmr/m/n/10 'and', 'Out-put':
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
 []\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 'ID': '4', 'Vari-
  []
 
 
-Underfull \hbox (badness 7221) in paragraph at lines 244--245
+Underfull \hbox (badness 7221) in paragraph at lines 272--273
 \OT1/cmr/m/n/10 ables': ['tem-per-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
 \OT1/cmr/m/n/10 a-ture', 'cur-rent'],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
 \OT1/cmr/m/n/10 'Val-ues': ['low',
  []
 
 
-Underfull \hbox (badness 5817) in paragraph at lines 244--245
+Underfull \hbox (badness 5817) in paragraph at lines 272--273
 \OT1/cmr/m/n/10 'low'], 'Op-er-a-tor':
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
 \OT1/cmr/m/n/10 'and', 'Out-put':
  []
 
 
-Underfull \hbox (badness 1629) in paragraph at lines 246--246
+Underfull \hbox (badness 1629) in paragraph at lines 274--274
 []\OT1/cmr/m/n/10 Rule 4 If driv-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--246
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
 \OT1/cmr/m/n/10 is bad and the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--246
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
 \OT1/cmr/m/n/10 jour-ney[]time is
  []
 
 
-Overfull \hbox (17.98029pt too wide) in paragraph at lines 234--249
- [] 
- []
-
-
-Underfull \hbox (badness 1701) in paragraph at lines 262--262
-[]\OT1/cmr/m/n/10 Script should ter-
- []
-
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 264--264
-\OT1/cmr/m/n/10 does not ex-ist,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 264--264
-\OT1/cmr/m/n/10 empty.txt for
- []
-
-
-Underfull \hbox (badness 1701) in paragraph at lines 264--264
-[]\OT1/cmr/m/n/10 Script should ter-
- []
-
-
-Overfull \hbox (17.98029pt too wide) in paragraph at lines 254--267
+Overfull \hbox (15.98029pt too wide) in paragraph at lines 262--277
  [] 
  []
 
 [9]
-Underfull \hbox (badness 1701) in paragraph at lines 280--280
+Underfull \hbox (badness 1701) in paragraph at lines 290--290
 []\OT1/cmr/m/n/10 Script should ter-
  []
 
@@ -517,59 +520,90 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
+Underfull \hbox (badness 10000) in paragraph at lines 292--292
 \OT1/cmr/m/n/10 does not ex-ist,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
+Underfull \hbox (badness 10000) in paragraph at lines 292--292
 \OT1/cmr/m/n/10 empty.txt for
  []
 
 
-Underfull \hbox (badness 1701) in paragraph at lines 282--282
+Underfull \hbox (badness 1701) in paragraph at lines 292--292
 []\OT1/cmr/m/n/10 Script should ter-
  []
 
 
-Overfull \hbox (17.98029pt too wide) in paragraph at lines 272--285
+Overfull \hbox (15.98029pt too wide) in paragraph at lines 282--295
+ [] 
+ []
+
+[10]
+Underfull \hbox (badness 1701) in paragraph at lines 308--308
+[]\OT1/cmr/m/n/10 Script should ter-
+ []
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--310
+\OT1/cmr/m/n/10 does not ex-ist,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--310
+\OT1/cmr/m/n/10 empty.txt for
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 310--310
+[]\OT1/cmr/m/n/10 Script should ter-
+ []
+
+
+Overfull \hbox (15.98029pt too wide) in paragraph at lines 300--313
  [] 
  []
 
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
-[10]
-Overfull \hbox (2.41978pt too wide) in paragraph at lines 296--297
+[11]
+Overfull \hbox (2.41978pt too wide) in paragraph at lines 324--325
 []\OT1/cmr/m/n/10 105.55555555555556| 
  []
 
 
-Underfull \hbox (badness 1755) in paragraph at lines 298--298
+Underfull \hbox (badness 1755) in paragraph at lines 326--326
 \OT1/cmr/m/n/10 (This rep-re-sents a very
  []
 
 
-Underfull \hbox (badness 1755) in paragraph at lines 300--300
+Underfull \hbox (badness 1755) in paragraph at lines 328--328
 \OT1/cmr/m/n/10 (This rep-re-sents a very
  []
 
 
-Overfull \hbox (2.41978pt too wide) in paragraph at lines 304--305
+Overfull \hbox (2.41978pt too wide) in paragraph at lines 332--333
 []\OT1/cmr/m/n/10 114.28571428571429| 
  []
 
 
-Overfull \hbox (2.41978pt too wide) in paragraph at lines 306--307
+Overfull \hbox (2.41978pt too wide) in paragraph at lines 334--335
 []\OT1/cmr/m/n/10 108.33333333333333| 
  []
 
-[11] [12] ("Comp Int Report.aux") ) 
+[12] [13] ("Comp Int Report.aux") ) 
 Here is how much of TeX's memory you used:
- 2683 strings out of 493323
- 39209 string characters out of 3145100
- 118609 words of memory out of 3000000
- 6195 multiletter control sequences out of 15000+200000
+ 2708 strings out of 493323
+ 39744 string characters out of 3145100
+ 117609 words of memory out of 3000000
+ 6215 multiletter control sequences out of 15000+200000
  8551 words of font info for 30 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,15n,29p,1427b,411s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -583,9 +617,9 @@ cm/cmr12.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb
 >
-Output written on "Comp Int Report.pdf" (12 pages, 185027 bytes).
+Output written on "Comp Int Report.pdf" (13 pages, 213124 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
+ 105 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

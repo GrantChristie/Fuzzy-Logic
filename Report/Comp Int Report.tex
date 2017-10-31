@@ -178,23 +178,51 @@ Defuzzified Value = (Sum of Areas * Centres)/(Sum of Areas)
 \subsection{File Reader}
 The individual file reader module can be found in ‘File Reader.py’. When executing the file the script will ask the user for the name of the file they wish to have the system read.  The script will then execute and return to the user a dictionary which contains the keys: Rule\textunderscore{Base}, Rules, Sets, Real\textunderscore{Values} and their corresponding values.
 
+\begin{figure}[H]
+\includegraphics[width=12cm]{example1}
+\caption{File Reader example output}
+\end{figure}
+
 \subsection{Membership Calculator}
-The individual membership calculator module can be found in ‘Membership.py’. When executing the file the script will ask the user for the a, b, alpha, beta and value to generate the membership value and return it to the user.  
+The individual membership calculator module can be found in ‘Membership Calculator.py’. When executing the file the script will ask the user for the a, b, alpha, beta and value to generate the membership value and return it to the user.  
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=5cm]{example2}
+\caption{Membership Calculator example output}
+\end{figure}
 
 \subsection{Rule Reader}
-The individual rule reader module can be found in ‘Rule Reader.py’. When executing the file the script will ask the user for the rule they wish to be read. This rule must follow the pattern indicated in the assignment specification: Rule [x] if the \textless variable\textgreater is \textless value\textgreater [and|or] \textless variable\textgreater is \textless value\textgreater then the will be \textless variable\textgreater \textless value\textgreater
-If an input is entered that does not fit this format an error message will be returned. If the input is accepted by the script then it will return a dictionary to the user with the following keys: ID, Variables, Values, Operator, Output. Each key will have it’s corresponding values populated from the relevant section in the inputted rule. 
+The individual rule reader module can be found in ‘Rule Reader.py’. When executing the file the script will ask the user for the rule they wish to be read. This rule must follow the pattern indicated in the assignment specification: Rule [x] if the \textless variable\textgreater is \textless value\textgreater [and|or] \textless variable\textgreater is \textless value\textgreater then the will be \textless variable\textgreater \textless value\textgreater. If an input is entered that does not fit this format an error message will be returned. If the input is accepted by the script then it will return a dictionary to the user with the following keys: ID, Variables, Values, Operator, Output. Each key will have it’s corresponding values populated from the relevant section in the inputted rule. 
+
+
+\begin{figure}[H]
+\includegraphics[width=12cm]{example3}
+\caption{Rule Reader example output}
+\end{figure}
 
 \subsection{Rule Firer}
-In order for this module to work it is necessary that the previous three modules are combined to create a partially complete system. This is required because we need to have a set of rules to work with and we need to be able to calculate membership values. When executing the partial system the script, Firing Rules.py, will ask the user for the name of the file they wish to be used, this is the functionality that was created in the first module, File Reader.py. Within this file should be the rules and variables outlined within the assignment specification in the correct format. The script will use these rules and values to calculate single values for each outcome set. In example.txt the outcome sets are small, moderate and big under the identifier tip.
+In order for this module to work it is necessary that the previous three modules are combined to create a partially complete system. This is required because we need to have a set of rules to work with and we need to be able to calculate membership values. When executing the partial system the script, Rule Firer.py, will ask the user for the name of the file they wish to be used, this is the functionality that was created in the first module, File Reader.py. Within this file should be the rules and variables outlined within the assignment specification in the correct format. The script will use these rules and values to calculate single values for each outcome set. In example.txt the outcome sets are small, moderate and big under the identifier tip.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=6cm]{example4}
+\caption{Rule Firer example output}
+\end{figure}
 
 \subsection{Defuzzifier}
-Like the rule firer module the defuzzifier can not work without combining the previous four modules together. The defuzzifier requires rules to be fired to defuzz the values returned and the rule firer cannot work without the first three modules. The defuzzifier module can be found in Defuzz.py, when executing the file the script will again ask the user for the filename of the file they wish to be used by the script. The defuzzifier will take the values returned from the rule firer module and perform a series of calculations shown  in section \ref{defuzz} to return the final defuzzified value to the user.
+Like the rule firer module the defuzzifier can not work without combining the previous four modules together. The defuzzifier requires rules to be fired to defuzz the values returned and the rule firer cannot work without the first three modules. The defuzzifier module can be found in Defuzzifier.py, when executing the file the script will again ask the user for the filename of the file they wish to be used by the script. The defuzzifier will take the values returned from the rule firer module and perform a series of calculations shown  in section \ref{defuzz} to return the final defuzzified value to the user.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=6cm]{example5}
+\caption{Defuzzifier example output}
+\end{figure}
 
 \section{Testing}
 \subsection{File Reader}
 \begin{center}
- \begin{tabular}{ |p{2cm}||p{3cm}|p{3cm}|p{3cm}|  }
+ \begin{tabular}{ |p{2cm}|p{3cm}|p{3cm}|p{3cm}|  }
  \hline
  Test Number & Document Tested & Expected Result & Actual Result \\ [0.5ex] 
  \hline\hline
@@ -212,7 +240,7 @@ Like the rule firer module the defuzzifier can not work without combining the pr
 \subsection{Membership Calculator}
 To perform this test I will use the following 4 tuple:  Middle-Age (50,60,15,5) with the following ages: 20,37,55,63,85
 \begin{center}
- \begin{tabular}{ |p{2cm}||p{3cm}|p{3cm}|p{3cm}|  }
+ \begin{tabular}{ |p{2cm}|p{3cm}|p{3cm}|p{3cm}|  }
  \hline
  Test Number & Inputs & Expected Result & Actual Result \\ [0.5ex] 
  \hline\hline
@@ -231,7 +259,7 @@ To perform this test I will use the following 4 tuple:  Middle-Age (50,60,15,5) 
 
 \subsection{Rule Reader}
 \begin{center}
- \begin{tabular}{ |p{2cm}||p{3cm}|p{3cm}|p{3cm}|  }
+ \begin{tabular}{ |p{2cm}|p{3cm}|p{3cm}|p{3cm}|  }
  \hline
  Test Number & Document Tested & Expected Result & Actual Result \\ [0.5ex] 
  \hline\hline
@@ -251,7 +279,7 @@ To perform this test I will use the following 4 tuple:  Middle-Age (50,60,15,5) 
 
 \subsection{Rule Firer}
 \begin{center}
- \begin{tabular}{ |p{2cm}||p{3cm}|p{3cm}|p{3cm}|  }
+ \begin{tabular}{ |p{2cm}|p{3cm}|p{3cm}|p{3cm}|  }
  \hline
  Test Number & Document Tested & Expected Result & Actual Result \\ [0.5ex] 
  \hline\hline
@@ -269,7 +297,7 @@ To perform this test I will use the following 4 tuple:  Middle-Age (50,60,15,5) 
 
 \subsection{Defuzzifier}
 \begin{center}
- \begin{tabular}{ |p{2cm}||p{3cm}|p{3cm}|p{3cm}|  }
+ \begin{tabular}{ |p{2cm}|p{3cm}|p{3cm}|p{3cm}|  }
  \hline
  Test Number & Document Tested & Expected Result & Actual Result \\ [0.5ex] 
  \hline\hline
@@ -286,10 +314,10 @@ To perform this test I will use the following 4 tuple:  Middle-Age (50,60,15,5) 
 The only difference here between expected and actual results is the accuracy of the floating point number in test number 1. The system returns a more accurate number so there is no problem with the mismatch.
 
 \subsection{Full System}
-To test the exhaustively test the full system’s reliability, I will use the both rule base found in example.txt and change the real world values to ensure the correct results is returned in different circumstances. As a general rule, tests where driving is good and journey times are short should always return a higher value than those that represent the opposite. The first few tests will be based on the more extreme scenarios and then the rest will deviate slightly to see how the output value changes. If the journey time increases the tip should be less and vice versa. If the driving quality increases the tip should also increase and vice versa. There are also instances where given the real world values where the rule firing will only return one potential membership, in this example {small:1}. If given this value, the system will return the maximum value of that tuple in the rule base. For this test set those max values are 50 for small, 100 for moderate and 150 for big.
+To exhaustively test the full system’s reliability, I will use the rule base found in example.txt and change the real world values to ensure the correct results is returned in different circumstances. As a general rule, tests where driving is good and journey times are short should always return a higher value than those that represent the opposite. The first few tests will be based on the more extreme scenarios and then the rest will deviate slightly to see how the output value changes. If the journey time increases the tip should be less and vice versa. If the driving quality increases the tip should also increase and vice versa. There are also instances where given the real world values where the rule firing will only return one potential membership, in this example \{small:1\}. If given this value, the system will return the maximum value of that tuple in the rule base. For this test set those max values are 50 for small, 100 for moderate and 150 for big.
 
 \begin{center}
- \begin{tabular}{ |p{2cm}||p{4cm}|p{3cm}|  }
+ \begin{tabular}{ |p{2cm}|p{4cm}|p{3cm}|  }
  \hline
  Test Number & Real World Values & Result \\ [0.5ex] 
  \hline\hline
@@ -325,14 +353,15 @@ As can be seen the system behaves as one would expect from a Fuzzy Logic system,
   \item If there is an issue within the rulebase file the system will terminate abruptly.
   \item Rules must follow a strict pattern.
   \item Only one type of conditional operator may be used within a single rule.
+  \item A single rule can only have one conditional operator.
 \end{itemize}
 \subsection{Future Work}
 \begin{itemize}
   \item Improve user interface and add visualisation of the data.
   \item Improve error catching.
-  \item Allow for flexibility in rulebase and rule formatting
+  \item Allow for flexibility in rulebase and rule formatting.
 \end{itemize}
 
 \subsection{Conclusion}
-As it stands given correctly formatted inputs the system returns a calculated defuzzified output which is fairly accurate, there can be a small margin of difference between values the system returns and hand calculated values bu the margin is never too large for this to become an issue. This is also somewhat to be expected as it is in the nature of fuzzy logic to not have a "fixed" defuzzified value.
+In conclusion, given correctly formatted inputs the system returns a calculated defuzzified output which is fairly accurate, there can be a small margin of difference between values the system returns and hand calculated values bu the margin is never too large for this to become an issue. This is also somewhat to be expected as it is in the nature of fuzzy logic to not have a "fixed" defuzzified value.
 \end{document}
